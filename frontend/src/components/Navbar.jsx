@@ -10,7 +10,13 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center py-4 text-sm mb-4 border-b border-b-gray-400">
-      <img className="w-46 cursor-pointer" src={assets.logo} alt="" srcSet="" />
+      <img
+        onClick={() => navigate("/")}
+        className="w-46 cursor-pointer"
+        src={assets.logo}
+        alt=""
+        srcSet=""
+      />
       <ul className="hidden md:flex items-start gap-6 font-semibold">
         <NavLink to={"/"}>
           <li className="py-1">HOME</li>
@@ -36,13 +42,13 @@ const Navbar = () => {
               className="w-10 rounded-full   "
               src={assets.profile_pic}
               alt=""
-              srcset=""
+              srcSet=""
             />
             <img
               className="w-2.5"
               src={assets.dropdown_icon}
               alt=""
-              srcset=""
+              srcSet=""
             />
             <div className="absolute top-full right-0 pt-8 bg-white text-base font-medium  p-4 z-20 hidden group-hover:block ">
               <div className="flex flex-col gap-4 p-4 w-auto">

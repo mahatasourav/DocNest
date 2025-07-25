@@ -9,8 +9,8 @@ const Header = () => {
         <p className="  text-2xl md:text-5xl font-bold text-white m-auto">
           Book Appointment <br /> With Trusted Doctors
         </p>
-        <div className="flex flex-cloumn md:flex-row  items-center gap-3 justify-center text-white text-sm font-semibold">
-          <img className="w-28" src={assets.group_profiles} alt="" srcset="" />
+        <div className="flex flex-col md:flex-row  items-center gap-3 justify-center text-white text-sm font-semibold">
+          <img className="w-28" src={assets.group_profiles} alt="" srcSet="" />
           <p>
             Simply browse through our extensive list of trusted doctors,
             <br />
@@ -18,11 +18,11 @@ const Header = () => {
           </p>
         </div>
         <a
-          href=""
+          href="#speciality"
           className="flex items-center justify-center gap-2 bg-white text-grey  px-10 py-4  rounded-full hover:scale-105 transition-all duration-300"
         >
           Book Appoinment{" "}
-          <img src={assets.arrow_icon} alt="" srcset="" className="w-3" />
+          <img src={assets.arrow_icon} alt="" srcSet="" className="w-3" />
         </a>
       </div>
       {/* ------- Right Side ----- */}
@@ -31,7 +31,7 @@ const Header = () => {
           className="w-full h-5/6 absoulte  "
           src={assets.header_img}
           alt=""
-          srcset=""
+          srcSet=""
         />
       </div>
     </div>

@@ -10,6 +10,7 @@ import Doctor from "./pages/Doctor";
 import MyAppoinment from "./pages/MyAppoinment";
 import MyProfile from "./pages/MyProfile";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/appointment" element={<Appoinment />} />
+        <Route path="/appointment/:docId" element={<Appoinment />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 };
