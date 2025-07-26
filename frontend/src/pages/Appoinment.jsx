@@ -21,7 +21,7 @@ const Appoinment = () => {
       return;
     }
     setDocInfo(docInfo);
-    console.log("docInfo", docInfo);
+    // console.log("docInfo", docInfo);
   };
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const Appoinment = () => {
     }
 
     setDocSlot(allSlots);
-    console.log("Available slots:", allSlots);
+    // console.log("Available slots:", allSlots);
   };
   // ✅ Correctly calling in useEffect
   useEffect(() => {
@@ -159,9 +159,12 @@ const Appoinment = () => {
                   }`}
                   onClick={() => setSlotIndex(index)}
                 >
-                  {console.log("item ", item, index)}
-                  <p>{item && daysOfWeek[item.slots[0].datetime.getDay()]}</p>
-                  <p> {item && item.slots[0].datetime.getDate()}</p>
+                  {/* {console.log("item ", item, index)} */}
+                  <p>
+                    {item.slots[0] &&
+                      daysOfWeek[item.slots[0].datetime.getDay()]}
+                  </p>
+                  <p> {item.slots[0] && item.slots[0].datetime.getDate()}</p>
                 </div>
               ))}
           </div>
