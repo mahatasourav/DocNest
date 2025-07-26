@@ -9,7 +9,7 @@ const Navbar = () => {
   const [token, setToken] = useState(true);
 
   return (
-    <div className="flex justify-between items-center py-4 text-sm mb-4 border-b border-b-gray-400">
+    <div className="flex justify-between  items-center py-4 text-sm mb-4 border-b border-b-gray-400">
       <img
         onClick={() => navigate("/")}
         className="w-46 cursor-pointer"
@@ -35,9 +35,9 @@ const Navbar = () => {
           <hr className=" border-none outline-none h-0.5 w-4/5 bg-primaryColor m-auto hidden" />
         </NavLink>
       </ul>
-      <div className="flesx items-center gap-4">
+      <div className="flex items-center gap-4 pl-10">
         {token ? (
-          <div className="flex items-center gap-2 cursor-pointer group relative ">
+          <div className="flex items-center gap-2 cursor-pointer group relative ml-36">
             <img
               className="w-10 rounded-full   "
               src={assets.profile_pic}
@@ -81,6 +81,44 @@ const Navbar = () => {
             Create Account
           </button>
         )}
+        <img
+          onClick={() => setShowMenu(true)}
+          src={assets.menu_icon}
+          alt=""
+          srcset=""
+          className=" w-6 md:hidden"
+        />
+
+        {/* ---- Mobile Menu ------ */}
+        <div
+          className={`${
+            showMenu ? "fixed w-full " : "h-0 w-0"
+          } md:hidden right-0 bottom-0 top-0 overflow-hidden z-30 bg-white transition-all duration-300`}
+        >
+          <div className="flex justify-between items-center px-8 mt-4">
+            <img className="w-36 cursor-pointer" src={assets.logo} alt="" />
+            <img
+              className="w-10"
+              src={assets.cross_icon}
+              alt=""
+              onClick={() => setShowMenu(false)}
+            />
+          </div>
+          <ul className="flex flex-col items-center gap-6 mt-12 text-lg font-medium">
+            <NavLink onClick={() => setShowMenu(false)} to="/">
+              Home
+            </NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/doctors">
+              ALL DOCTORS
+            </NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/about">
+              ABOUT
+            </NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/contact">
+              CONTACT
+            </NavLink>
+          </ul>
+        </div>
       </div>
     </div>
   );
