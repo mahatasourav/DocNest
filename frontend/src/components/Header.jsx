@@ -3,7 +3,7 @@ import { assets } from "../assets/assets_frontend/assets";
 
 const Header = () => {
   return (
-    <div className="flex md:flex-row flex-col bg-primaryColor flex-wrap items-center justify-center gap-6 rounded-lg px-4 md:px-6 lg:px-10 ">
+    <div className="flex md:flex-row flex-col bg-primaryColor flex-wrap items-center justify-center gap-6 rounded-lg px-4 md:px-6 lg:px-10 pt-8 ">
       {/* ------- Left Side ----- */}
       <div className="  flex flex-col md:items-start sm:items-center justify-center gap-5">
         <p className="  text-2xl md:text-5xl font-bold text-white m-auto">
@@ -11,7 +11,7 @@ const Header = () => {
         </p>
         <div className="flex flex-col md:flex-row  items-center gap-3 justify-center text-white text-sm font-semibold">
           <img className="w-28" src={assets.group_profiles} alt="" srcSet="" />
-          <p>
+          <p className="text-center md:text-left">
             Simply browse through our extensive list of trusted doctors,
             <br />
             schedule your appointment hassle-free.

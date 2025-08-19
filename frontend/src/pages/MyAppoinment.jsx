@@ -9,6 +9,7 @@ const Myappoinment = () => {
   const { token, backendurl, doctors, getDoctorsData } = useContext(AppContext);
   const [appointment, setappointment] = useState([]);
   const navigate = useNavigate();
+
   // const [showCancelledAppointment, setShowCancelledAppointment] =
   //   useState(true);
   const months = [
@@ -147,35 +148,42 @@ const Myappoinment = () => {
         {/* {console.log("appointment isssssssssssssssssssssss", appointment)} */}
         {appointment.map((item, index) => (
           <div>
-            <div key={index} className="flex gap-10 justify-between ">
-              <div>
-                <img
-                  className="w-[134px] bg-indigo-50"
-                  src={item.docData.image}
-                  alt=""
-                  srcSet=""
-                />
+            <div
+              key={index}
+              className="flex flex-col md:flex-row gap-4 md:gap-10 justify-between "
+            >
+              <div className="flex gap-4 p-2">
+                <div>
+                  <img
+                    className="w-[134px] bg-indigo-50"
+                    src={item.docData.image}
+                    alt=""
+                    srcSet=""
+                  />
+                </div>
+                <div className="flex-1 text-sm text-zinc-700  md:gap-3 p-4">
+                  <p className="font-bold text-black">{item.docData.name}</p>
+                  <p className="text-sm text-gray-500">
+                    {item.docData.speciality}
+                  </p>
+
+                  <p className={`text-md text-gray-800 hidden md:flex `}>
+                    Address :
+                  </p>
+                  <p className="text-sm text-gray-500 hidden md:flex">
+                    {item.docData.address.line1}
+                  </p>
+                  <p className="text-sm text-gray-500 hidden md:flex">
+                    {item.docData.address.line2}
+                  </p>
+                  <p className="text-sm text-gray-900 mt-2 md:mt-0 font-medium ">
+                    Date & Time :{" "}
+                    <span className=" text-gray-500">
+                      {slotDateFormat(item.slotDate)} | {item.slotTime}
+                    </span>
+                  </p>
+                </div>
               </div>
-              <div className="flex-1 text-sm text-zinc-700 gap-3">
-                <p className="font-bold text-black">{item.docData.name}</p>
-                <p className="text-sm text-gray-500">
-                  {item.docData.speciality}
-                </p>
-                <p className="text-md text-gray-800">Address :</p>
-                <p className="text-sm text-gray-500">
-                  {item.docData.address.line1}
-                </p>
-                <p className="text-sm text-gray-500">
-                  {item.docData.address.line2}
-                </p>
-                <p className="text-sm text-gray-900 font-medium">
-                  Date & Time :{" "}
-                  <span className=" text-gray-500">
-                    {slotDateFormat(item.slotDate)} | {item.slotTime}
-                  </span>
-                </p>
-              </div>
-              <div></div>
 
               <div className="flex flex-col gap-2 justify-end ">
                 {!item.cancelled && item.payment && (
@@ -196,18 +204,18 @@ const Myappoinment = () => {
                     onClick={() => cancelledAppointment(item._id)}
                     className="tex-sm text-stone-500 sm:min-w-48 text-center py-2 rounded-md border hover:bg-red-600 hover:text-white transition-all duration-300"
                   >
-                    Cancel appointment
+                    Cancel <span>appointment</span>
                   </button>
                 )}
                 {item.cancelled && (
-                  <div className="flex flex-col justify-around items-end ">
-                    <button
-                      className="mb-16 mr-4"
-                      onClick={() => setShowCancelledAppointment(false)}
+                  <div className="flex  md:flex-col md:justify-center md:items-center ">
+                    {/* <button
+                      className=""
+                      // onClick={() => setShowCancelledAppointment(false)}
                     >
                       <RxCross2 />
-                    </button>
-                    <button className="py-3 px-6 border border-red-900 text-red-700">
+                    </button> */}
+                    <button className="py-2 px-3 border border-red-900 text-red-700 w-full rounded-md">
                       Appointment Cancelled
                     </button>
                   </div>

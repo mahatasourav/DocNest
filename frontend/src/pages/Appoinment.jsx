@@ -162,17 +162,17 @@ const Appoinment = () => {
       <div>
         {/* ------Doctor Details ------- */}
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 my-5">
+        <div className="flex flex-col sm:flex-row items-center gap-4 my-5 px-4">
           <div>
             <img
-              className="bg-primaryColor w-full sm:max-w-72 rounded-lg"
+              className="bg-primaryColor w-full sm:max-w-72 rounded-lg px-4"
               src={docInfo.image}
               alt=""
               srcSet=""
             />
           </div>
           {/* ---Doctor Name , Degree , About , Appointment fees --- */}
-          <div className="flex-1 border border-gray-400 rounded-xl p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0">
+          <div className="flex-1 border border-gray-400 rounded-xl p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0 ">
             <p className="text-3xl font-medium flex items-center gap-2">
               {docInfo.name}{" "}
               <img
@@ -207,14 +207,14 @@ const Appoinment = () => {
 
         {/* ----- Booking slots ------- */}
 
-        <div className="flex flex-col justify-center sm:ml-72 sm:pl-4 mt-4 font gap-4  ">
+        <div className="flex flex-col justify-center sm:ml-72 sm:pl-4 mt-4 font gap-4 text-center md:text-start px-8 ">
           <p>Booking slots</p>
           <div className="flex flex-col sm:flex-row gap-4 ">
             {docSlot.length > 0 &&
               docSlot.map((item, index) => (
                 <div
                   key={index}
-                  className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
+                  className={`text-center py-2 md:py-6 min-w-16 rounded-full cursor-pointer ${
                     index === slotIndex
                       ? "bg-primaryColor text-white"
                       : "bg-gray-100 text-gray-600"
@@ -246,10 +246,10 @@ const Appoinment = () => {
                 </p>
               ))}
           </div>
-          <div className="flex justify-start items-start">
+          <div className="flex justify-center items-center  ">
             <button
               onClick={bookAppointment}
-              className="bg-primaryColor text-white text-sm px-14 py-3 rounded-full font-light my-6 mr-auto "
+              className="bg-primaryColor text-white text-sm px-14 py-3 rounded-full font-light my-6 md:mr-auto  "
             >
               Book an appointment
             </button>

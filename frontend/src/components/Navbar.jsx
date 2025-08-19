@@ -42,11 +42,11 @@ const Navbar = () => {
           <hr className=" border-none outline-none h-0.5 w-4/5 bg-primaryColor m-auto hidden" />
         </NavLink>
       </ul>
-      <div className="flex items-center gap-4 pl-10">
+      <div className="flex items-center gap-4 pl-1 md:pl-10 ">
         {token && userData ? (
-          <div className="flex items-center gap-2 cursor-pointer group relative ml-36">
+          <div className="flex items-center gap-2 cursor-pointer group relative ml-10 lg:ml-36">
             <img
-              className="w-8 h-8 rounded-full object-cover "
+              className="w-10 h-10 rounded-full object-cover "
               src={userData.image}
               alt=""
               srcSet=""
