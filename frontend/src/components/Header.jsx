@@ -3,7 +3,7 @@ import { assets } from "../assets/assets_frontend/assets";
 
 const Header = () => {
   return (
-    <div className="flex md:flex-row flex-col bg-primaryColor flex-wrap items-center justify-center gap-6 rounded-lg px-4 md:px-6 lg:px-10 pt-8 ">
+    <div className="flex md:flex-row flex-col bg-primaryColor flex-wrap items-center justify-center gap-6 rounded-lg px-4 md:px-6 lg:px-10 pt-8 mt-10 ">
       {/* ------- Left Side ----- */}
       <div className="  flex flex-col md:items-start sm:items-center justify-center gap-5">
         <p className="  text-2xl md:text-5xl font-bold text-white m-auto">

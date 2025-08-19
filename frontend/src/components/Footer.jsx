@@ -4,7 +4,7 @@ import { assets } from "../assets/assets_frontend/assets";
 const Footer = () => {
   return (
     <div className="mx-10">
-      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
+      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-12 md:mt-28 lg:mt-40 text-sm">
         {/* ---- Left Section ------ */}
 
         <div className="flex flex-col gap-5">
