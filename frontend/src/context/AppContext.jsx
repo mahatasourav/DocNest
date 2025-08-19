@@ -18,7 +18,7 @@ const AppContextProvider = ({ children }) => {
   const getDoctorsData = async () => {
     try {
       const { data } = await axios.get(backendurl + "/api/doctor/doctor-list");
-      console.log("data", data);
+      console.log("data of doctors data", data);
       setDoctors(data.doctors);
     } catch (error) {
       console.log("error", error);
@@ -32,7 +32,7 @@ const AppContextProvider = ({ children }) => {
       });
 
       if (data.success) {
-        console.log("user profile data", data);
+        console.log("data of userprofile data", data);
         setUserData(data.userData);
       } else {
         toast.error(data.message);

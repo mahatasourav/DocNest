@@ -40,7 +40,7 @@ const Myappoinment = () => {
         { headers: { token } }
       );
 
-      console.log("dataaa", data);
+      console.log("dataaa of get userAppointment", data);
 
       if (data.success) {
         // console.log("dataaaa", data);
@@ -135,9 +135,7 @@ const Myappoinment = () => {
   };
   useEffect(() => {
     if (token) {
-      return () => {
-        getUserAppointment();
-      };
+      getUserAppointment();
     }
   }, [token]);
   return (
