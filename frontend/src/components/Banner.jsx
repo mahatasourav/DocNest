@@ -10,7 +10,7 @@ const Banner = () => {
   justify-between text-white  md:pt-6"
     >
       {/* ------Left Side ------- */}
-      <div className="flex-1 lg:pl-5 sm:py-10 md:py-16 lg:py-24 mb-1">
+      <div className="flex-1 lg:pl-5 py-10 md:py-16 lg:py-24 mb-1">
         <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
           <p>Book Appointment</p>
           <p className="mt-4">With 100+ Trusted Doctors</p>

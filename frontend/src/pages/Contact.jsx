@@ -9,14 +9,14 @@ const Contact = () => {
       </p>
       <div className="flex flex-col md:flex-row gap-12 justify-center  ">
         <img
-          className="w-full md:max-w-[350px]"
+          className="w-full md:max-w-[350px] px-8"
           src={assets.contact_image}
           alt=""
           srcSet=""
         />
 
-        <div className="flex flex-col gap-7">
-          <p className="font-medium text-gray-700 text-lg">OUR OFFICE</p>
+        <div className="flex flex-col gap-7 text-center md:text-start">
+          <p className="font-medium text-gray-700 text-lg ">OUR OFFICE</p>
           <p className="text-sm text-gray-500">
             00000 Willms Station <br /> Suite 000, Washington, USA
           </p>
@@ -29,7 +29,7 @@ const Contact = () => {
           <p className="text-sm text-gray-500">
             Learn more about our teams and job openings.
           </p>
-          <button className="text-black border border-gray-700 px-6 py-3 mr-auto hover:bg-black hover:text-white">
+          <button className="text-black border border-gray-700 px-6 py-3 mr-auto hover:bg-black hover:text-white m-auto">
             Explore Jobs
           </button>
         </div>

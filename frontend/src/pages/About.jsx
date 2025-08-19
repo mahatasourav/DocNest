@@ -10,12 +10,12 @@ const About = () => {
 
       <div className="my-10 flex flex-col md:flex-row gap-12 ">
         <img
-          className="w-full md:max-w-[360px]"
+          className="w-full md:max-w-[360px] px-4"
           src={assets.about_image}
           alt=""
           srcSet=""
         />
-        <div className="flex flex-col gap-8 justify-center md:w-2/4 text-sm text-gray-600">
+        <div className="flex flex-col gap-8 justify-center md:w-2/4 text-sm text-gray-600 px-4 text-center md:text-start">
           <p>
             Welcome to Prescripto, your trusted partner in managing your
             healthcare needs conveniently and efficiently. At Prescripto, we
@@ -40,12 +40,12 @@ const About = () => {
         </div>
       </div>
       <div>
-        <p className="mb-3 text-2xl">
+        <p className="mb-3 text-2xl text-center md:text-start">
           WHY <span className="text-center text-gray-600">CHOOSE</span> US
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row mb-10">
+      <div className="flex flex-col md:flex-row mb-10 text-center md:text-start">
         <div className="border px-10 md:px-16 py-8 md:py-16 flex flex-col gap-5 text-[15px] hover:bg-primaryColor hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
           <b>EFFICIENCY:</b>
           <p>
