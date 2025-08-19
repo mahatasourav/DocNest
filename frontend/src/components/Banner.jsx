@@ -6,8 +6,8 @@ const Banner = () => {
   const navigate = useNavigate();
   return (
     <div
-      className="flex bg-primaryColor rounded-lg px-6 sm:px-10 md:px-14 my-16 md:mx-10
-  justify-between text-white  md:pt-6"
+      className="flex bg-primaryColor rounded-lg px-6 sm:px-10 md:px-14 my-4 md:my-16 md:mx-10
+  justify-between text-white  md:pt-6 text-center md:text-start"
     >
       {/* ------Left Side ------- */}
       <div className="flex-1 lg:pl-5 py-10 md:py-16 lg:py-24 mb-1">

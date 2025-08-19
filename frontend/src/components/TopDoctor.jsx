@@ -36,7 +36,7 @@ const TopDoctor = () => {
           navigate("/doctors");
           scrollTo(0, 0);
         }}
-        className="text-gray-600 bg-blue-50 px-12 py-3 rounded-full mt-10 hover:bg-blue-100 transition-all duration-300"
+        className="text-gray-600 bg-blue-50 px-12 py-3 rounded-full mt-4 md:mt-10 hover:bg-blue-100 transition-all duration-300"
       >
         more
       </button>
