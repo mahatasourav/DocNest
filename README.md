@@ -74,21 +74,35 @@
 
   - Add new doctors to the platform
 
-📸 Screenshots / Demo
 
-Patient Dashboard:
+  ---
 
-![Patient Dashboard](path_to_patient_dashboard_screenshot.png)
+## 📸 Screenshots / Demo
 
+### 🩺 User Side
 
-Doctor Dashboard:
+#### 1. All Doctors
+![All Doctors](./frontend/src/assets/allDoctors.png)
 
-![Doctor Dashboard](path_to_doctor_dashboard_screenshot.png)
+#### 2. My Appointments
+![My Appointments](./frontend/src/assets/myAppointments.png)
 
+#### 3. User Dashboard
+![User Dashboard](./frontend/src/assets/userDashboard.png)
 
-Booking Interface:
+#### 4. Payment System
+![Payment System](./frontend/src/assets/paymentSystem.png)
 
-![Booking Interface](path_to_booking_interface_screenshot.png)
+---
+
+### 🛠️ Admin Side
+
+#### 5. Admin Dashboard
+![Admin Dashboard](./frontend/src/assets/adminDashboard.png)
+
+#### 6. Manage Appointments
+![Manage Appointments](./frontend/src/assets/adminAppointmentsManage.png)
+
 
 
 ----
