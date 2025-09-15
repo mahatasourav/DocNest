@@ -200,7 +200,7 @@ const Appoinment = () => {
             </div>
 
             <p className="flex gap-4 my-4 text-center">
-              Appointment fee : ${docInfo.fees}
+              Appointment fee : ₹{docInfo.fees}.00
             </p>
           </div>
         </div>

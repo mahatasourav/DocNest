@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 const authAdmin = async (req, res, next) => {
   try {
     const atoken = req.headers.atoken;
-    console.log("atoken", atoken);
+    console.log("atoken iss", atoken);
 
     if (!atoken) {
       return res
@@ -11,7 +11,7 @@ const authAdmin = async (req, res, next) => {
         .json({ success: false, message: "Not Authorized login again" });
     }
     const token_decode = jwt.verify(atoken, process.env.JWT_SECRET);
-    console.log("atoken", token_decode);
+    console.log("atoken is", token_decode);
     if (token_decode !== process.env.ADMIN_EMAIL + process.env.ADMIN_PASSWORD) {
       return res
         .status(401)
