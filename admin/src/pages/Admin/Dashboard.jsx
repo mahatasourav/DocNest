@@ -50,7 +50,7 @@ const Dashboard = () => {
             </p>
           </div>
 
-          <div className="w-[300px] bg-white flex justify-start items-center py-3 px-6 gap-6 rounded-lg  ">
+          <div className="w-[300px]  bg-white flex justify-start items-center py-3 px-6 gap-6 rounded-lg  ">
             <img src={assets.patients_icon} alt="" srcset="" />
             <p className="flex flex-col gap-0.5 ">
               <span className="text-xl font-bold">
